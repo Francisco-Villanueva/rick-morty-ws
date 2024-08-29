@@ -1,11 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { CharacterList, CharactersInfo, NavLinks } from "../components";
-import { CharacterDetails } from "../components/character-detail";
-import "../styles/home-page.css";
+import { CharactersInfo, NavLinks } from "../components";
 import { CharacterDetailPage } from "./home";
 import CharacterSearchPage from "./home/character-search-page";
 import CharacterListPage from "./home/characters-list-page";
+import "../styles/home-page.css";
 
 export function HomePage() {
   return (
