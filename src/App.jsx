@@ -1,8 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { HomePage, WelcomePage } from "./pages";
 function App() {
   return (
     <div className="App">
-      <h1>Rick and Morty Characters</h1>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/home/*" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
