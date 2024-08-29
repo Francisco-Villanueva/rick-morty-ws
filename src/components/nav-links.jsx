@@ -14,6 +14,9 @@ export const NavLinks = () => {
         <li>
           <Link to="/home/characters">Characters</Link>
         </li>
+        <li>
+          <Link to="/home/search">Search</Link>
+        </li>
       </ul>
     </nav>
   );
