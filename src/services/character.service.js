@@ -11,9 +11,9 @@ export const getCharactersInfo = async () => {
     throw error;
   }
 };
-export const getCharacters = async (page = 1, count = 20) => {
+export const getCharacters = async (page = 1) => {
   try {
-    const response = await axios.get(`${API_URL}?page=${page}&count=${count}`);
+    const response = await axios.get(`${API_URL}?page=${page}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching characters:', error);

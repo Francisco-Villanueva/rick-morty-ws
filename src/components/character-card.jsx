@@ -13,7 +13,7 @@ export function CharacterCard({ character }) {
     >
       <img src={character.image} alt={character.name} />
       <section>
-        <h2>{character.name}</h2>
+        <h3>{character.name}</h3>
         <p>Status: {character.status}</p>
         <p>Species: {character.species}</p>
       </section>
