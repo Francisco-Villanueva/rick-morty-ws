@@ -5,7 +5,7 @@
 }
 
 .sidebar {
-    width: 250px;
+    min-width: 10%;
     background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -15,8 +15,6 @@
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
-    display: grid;
-    place-items: center;
 }
 
 .nav-links {
@@ -41,8 +39,8 @@
 }
 
 .character-list{
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1em;
 }
 
@@ -52,18 +50,47 @@
    cursor: pointer;
    transition: all .3s;
    border: 1px solid transparent;
+   display: flex;
+   gap: 1em;
+   width: 20%;
+   height: 130px;
+   flex-grow: 1;
+   
 }
 .character-card:hover{
     background-color: #222222;
     border: 1px solid #007bff;
 }
 .character-card img{
-  width: 100%;
-  border-radius: 1em 1em 0 0;
+height: 100%;
+aspect-ratio: 1/1;
+  border-radius: 1em 0 0 1em;
 }
 .character-card section{
-    padding: 1em;
     display: flex ;
     flex-direction: column;
-    gap: 1em;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.characters-info {
+
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.characters-info h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.characters-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
 }

@@ -2,9 +2,18 @@ import axios from 'axios';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-export const getCharacters = async (page = 1, count = 20) => {
+export const getCharactersInfo = async () => {
   try {
-    const response = await axios.get(`${API_URL}?page=${page}&count=${count}`);
+    const response = await axios.get(`${API_URL}`);
+    return response.data.info;
+  } catch (error) {
+    console.error('Error fetching characters:', error);
+    throw error;
+  }
+};
+export const getCharacters = async (page = 1) => {
+  try {
+    const response = await axios.get(`${API_URL}?page=${page}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching characters:', error);
@@ -24,7 +33,7 @@ export const getCharacterById = async (id) => {
 
 export const searchCharacters = async (name, page = 1, count = 20) => {
   try {
-    const response = await axios.get(`${API_URL}?name=${name}&page=${page}&count=${count}`);
+    const response = await axios.get(`${API_URL}?name=${name}`);
     return response.data;
   } catch (error) {
     console.error('Error searching characters:', error);

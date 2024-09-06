@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { CharacterList, NavLinks } from "../components";
-import { CharacterDetails } from "../components/character-detail";
-import "../styles/home-page.css";
+import { CharactersInfo, NavLinks } from "../components";
 import { CharacterDetailPage } from "./home";
+import CharacterSearchPage from "./home/character-search-page";
+import CharacterListPage from "./home/characters-list-page";
+import "../styles/home-page.css";
 
 export function HomePage() {
   return (
@@ -11,9 +12,10 @@ export function HomePage() {
       <NavLinks />
       <div className="main-content">
         <Routes>
-          <Route path="/" element={<CharacterList />} />
-          <Route path="/characters" element={<CharacterList />} />
+          <Route path="/" element={<CharactersInfo />} />
+          <Route path="/characters" element={<CharacterListPage />} />
           <Route path="/characters/:id" element={<CharacterDetailPage />} />
+          <Route path="/search" element={<CharacterSearchPage />} />
         </Routes>
       </div>
     </div>
