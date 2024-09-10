@@ -1,8 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { CharactersInfo, NavLinks } from "../components";
-import { CharacterDetailPage } from "./home";
-import CharacterSearchPage from "./home/character-search-page";
+import { CharacterDetailPage, NotFound } from "./home";
 import CharacterListPage from "./home/characters-list-page";
 import "../styles/home-page.css";
 
@@ -15,7 +14,7 @@ export function HomePage() {
           <Route path="/" element={<CharactersInfo />} />
           <Route path="/characters" element={<CharacterListPage />} />
           <Route path="/characters/:id" element={<CharacterDetailPage />} />
-          <Route path="/search" element={<CharacterSearchPage />} />
+          {/* TODO Agregar ruta NOT FOUND */}
         </Routes>
       </div>
     </div>

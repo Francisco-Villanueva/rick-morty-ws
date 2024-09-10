@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import { searchCharacters } from "../../services";
 import "../../styles/search-page.css";
 
-export default function CharacterSearchPage() {
+export function CharacterSearchPage() {
   // Estado para almacenar los resultados de la búsqueda, el estado de carga y los errores
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
